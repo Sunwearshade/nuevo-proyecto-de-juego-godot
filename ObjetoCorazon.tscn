@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://866hu2jlah2i"]
+
+[ext_resource type="Script" uid="uid://btf484827a5re" path="res://objeto_corazon.gd" id="1_objeto"]
+[ext_resource type="Texture2D" uid="uid://cfqki7wsnyys3" path="res://assets/Corazon.png" id="2_corazon"]
+
+[sub_resource type="AtlasTexture" id="Atlas_corazon_0"]
+atlas = ExtResource("2_corazon")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Atlas_corazon_1"]
+atlas = ExtResource("2_corazon")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Atlas_corazon_2"]
+atlas = ExtResource("2_corazon")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="Atlas_corazon_3"]
+atlas = ExtResource("2_corazon")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_corazon"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Atlas_corazon_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_corazon_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_corazon_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_corazon_3")
+}],
+"loop": 1,
+"name": &"latido",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_corazon"]
+radius = 28.0
+
+[node name="ObjetoCorazon" type="Area2D" unique_id=66801733]
+script = ExtResource("1_objeto")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=414906627]
+texture_filter = 1
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_corazon")
+animation = &"latido"
+autoplay = "latido"
+frame = 3
+frame_progress = 0.5610366
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1502279919]
+shape = SubResource("CircleShape2D_corazon")

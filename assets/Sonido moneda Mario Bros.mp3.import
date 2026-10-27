@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cms17cfpj4wrp"
+path="res://.godot/imported/Sonido moneda Mario Bros.mp3-a534e4c463af5a3611708faff909e11b.mp3str"
+
+[deps]
+
+source_file="res://assets/Sonido moneda Mario Bros.mp3"
+dest_files=["res://.godot/imported/Sonido moneda Mario Bros.mp3-a534e4c463af5a3611708faff909e11b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=100.0
+beat_count=0
+bar_beats=4
